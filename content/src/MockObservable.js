@@ -19,14 +19,14 @@ var MockObservable = function(){
   /**
     Notify the subscribers.
 
-    @param ...args List of arguments.
+    @param args Argument
   */
-  function notify(...args){
+  function notify(args){
     // For each observer in the list of subscribers.
     for(var index = 0, length = subscribers.length; index < length; index++){
       // Notify the observer.
       var observer = subscribers[index];
-      observer.notify(...args);
+      observer.notify(args);
     }
   }
 
